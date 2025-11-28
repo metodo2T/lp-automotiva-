@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-screen min-h-[750px] flex items-center overflow-hidden">
+    <section className="relative w-full min-h-screen flex items-center overflow-hidden py-32 md:py-0">
       {/* Background with Deep Blue Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         {carouselImages.map((img, index) => (
@@ -78,21 +78,20 @@ const Hero: React.FC = () => {
       {/* Content */}
       <div className="container mx-auto px-4 z-10 relative flex flex-col md:flex-row items-center">
         
-        <div className="w-full md:w-2/3 lg:w-1/2 pt-20">
-            {/* Badge */}
-            <div className="animate-fade-in-up inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8 hover:bg-white/10 transition-colors cursor-default">
-                <TrendingUp className="w-4 h-4 text-brand-orange" />
-                <span className="text-brand-orange text-xs md:text-sm font-bold tracking-widest uppercase">Conheça o Método 2T</span>
+        <div className="w-full md:w-4/5 lg:w-2/3 pt-10">
+            {/* Badge - MUITO CHAMATIVO */}
+            <div className="animate-pulse inline-flex items-center gap-2 px-6 py-2 rounded-full bg-red-600 border-2 border-red-400 text-white font-black tracking-widest uppercase shadow-[0_0_30px_rgba(220,38,38,0.7)] mb-8 transform hover:scale-105 transition-transform duration-300">
+                <span className="animate-bounce">🚨</span>
+                OPORTUNIDADE EXCLUSIVA
             </div>
 
-            {/* Headlines */}
-            <h1 className="animate-fade-in-up text-4xl md:text-6xl lg:text-7xl font-heading font-black text-white leading-[1.05] mb-6 drop-shadow-2xl tracking-tight">
-              Venda Mais Carros <br />
-              Com o <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-amber-300">Método 2T</span>
+            {/* Headlines - TITULO AMARELO E ANIMADO */}
+            <h1 className="animate-fade-in-up text-3xl md:text-5xl lg:text-6xl font-heading font-black text-brand-orange leading-tight mb-6 drop-shadow-[0_4px_4px_rgba(0,0,0,1)] tracking-tight uppercase">
+              Atenção Donos de Concessionárias e Revendedores de Veículos
             </h1>
             
-            <p className="animate-fade-in-up delay-[200ms] text-lg text-slate-300 leading-relaxed mb-10 max-w-xl font-light border-l-4 border-brand-orange pl-6">
-              Transformamos cliques em clientes qualificados na porta da sua loja. Pare de depender de indicações e tenha previsibilidade de vendas todos os dias.
+            <p className="animate-fade-in-up delay-[200ms] text-lg md:text-xl text-slate-200 leading-relaxed mb-10 max-w-2xl font-medium border-l-4 border-brand-orange pl-6 bg-black/40 py-4 pr-4 rounded-r-lg backdrop-blur-sm shadow-xl">
+              O Método que já gerou mais de <span className="text-brand-orange font-bold">R$ 15 milhões</span> em vendas para lojas e concessionárias agora pode fazer o mesmo por você com fluxo diário de clientes qualificados.
             </p>
 
             {/* CTA Button */}
@@ -102,7 +101,7 @@ const Hero: React.FC = () => {
                 className="group relative flex items-center justify-center gap-3 bg-gradient-to-r from-brand-orange to-amber-600 hover:from-amber-400 hover:to-amber-500 text-brand-blue px-8 py-5 rounded-lg text-lg font-bold transition-all transform hover:scale-105 shadow-[0_0_40px_rgba(255,177,0,0.3)] border border-white/20"
               >
                 <WhatsAppIcon className="w-6 h-6" />
-                Quero Mais Clientes
+                Quero Vender Mais
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>

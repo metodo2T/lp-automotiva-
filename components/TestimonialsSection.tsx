@@ -33,21 +33,14 @@ const TestimonialsSection: React.FC = () => {
            </p>
         </div>
 
-        {/* Mobile Frame Container */}
+        {/* Carousel Container - Removed Frame */}
         <div className="max-w-[320px] md:max-w-[360px] mx-auto relative group">
           
-          {/* Phone Frame Styling */}
-          <div className="relative bg-black rounded-[2.5rem] shadow-2xl border-[8px] border-slate-900 overflow-hidden aspect-[9/19] flex items-center justify-center ring-1 ring-white/20">
+          {/* Image Wrapper - Just rounded corners and shadow, no border/frame */}
+          <div className="relative rounded-2xl shadow-2xl overflow-hidden aspect-[9/16] flex items-center justify-center bg-black">
             
-            {/* Background Blur Effect (Fill gaps) */}
-            <div 
-                className="absolute inset-0 opacity-40 blur-xl scale-110 transition-colors duration-700"
-                style={{ backgroundImage: `url(${socialProofImages[currentIndex]})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-            ></div>
-            <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
-
-            {/* Current Image - Full Contain */}
-            <div className="relative z-10 w-full h-full bg-black">
+            {/* Current Image */}
+            <div className="relative z-10 w-full h-full">
                 <img 
                   src={socialProofImages[currentIndex]} 
                   alt={`Resultado Método 2T ${currentIndex + 1}`}
@@ -59,21 +52,21 @@ const TestimonialsSection: React.FC = () => {
             {/* Navigation Buttons */}
             <button 
                 onClick={prevSlide} 
-                className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-brand-orange text-white hover:text-brand-blue p-2 rounded-full backdrop-blur-md transition-all border border-white/20"
+                className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-brand-orange text-white hover:text-brand-blue p-2 rounded-full backdrop-blur-sm transition-all border border-white/10"
                 aria-label="Anterior"
             >
                 <ChevronLeft size={24} />
             </button>
             <button 
                 onClick={nextSlide} 
-                className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-brand-orange text-white hover:text-brand-blue p-2 rounded-full backdrop-blur-md transition-all border border-white/20"
+                className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-brand-orange text-white hover:text-brand-blue p-2 rounded-full backdrop-blur-sm transition-all border border-white/10"
                 aria-label="Próximo"
             >
                 <ChevronRight size={24} />
             </button>
             
              {/* Slide Indicators */}
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
                 {socialProofImages.map((_, idx) => (
                 <button 
                     key={idx}
